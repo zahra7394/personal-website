@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahra Moti — Privacy & ML Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.style.colorScheme = t;
+      document.addEventListener('DOMContentLoaded', function() { document.body.setAttribute('data-theme', t); });
+    })();
+  </script>
+</head>
+<body data-theme="dark">
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#publications">Papers</a></li>
+      <li><a href="#press">Press</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="container hero-grid">
+    <div class="profile-side">
+      <div class="profile-photo">
+        <img src="profile.jpeg" alt="Zahra Moti">
+      </div>
+      <h2 class="profile-name">Zahra Moti</h2>
+      <div class="profile-role">PhD Candidate</div>
+      <div class="profile-affiliation">Radboud University</div>
+      <div class="profile-socials">
+        <a href="https://github.com/zahr7394" target="_blank" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=SJyH-u8AAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/zahra-moti-53414876/" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:zahra.moti@ru.nl" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p>
+        I am a PhD candidate at <a href="https://www.ru.nl" class="text-link">Radboud University</a> 
+        working on <strong>web and mobile privacy</strong>. My research combines <strong>large-scale web 
+        measurement</strong>, <strong>AI</strong>, and <strong>automation</strong> to understand how tracking technologies operate across 
+        websites and mobile applications.
+      </p>
+      <p>
+        I build tools that enable researchers to systematically study privacy risks in the modern 
+        web and mobile ecosystem. Recently, I developed 
+        <a href="https://github.com/iOSWhisperTest" class="text-link" target="_blank"><strong>WhisperTest</strong></a>, 
+        an <strong>LLM-powered automation library</strong> that dynamically navigates mobile apps 
+        using natural language reasoning to analyze trackers and advertisements.
+      </p>
+      <p>
+        Backed by publications at <strong>IEEE S&P</strong> and <strong>ACM CCS</strong>, I combine 
+        strong research depth with hands-on experience.
+      </p>
+      <p>
+        Alongside my academic work, I collaborate with industry on applied privacy and AI systems. 
+        I currently work as a consultant with <a href="https://www.vaultjs.com" class="text-link">VaultJS</a> 
+        in the United States and previously completed an industry internship at 
+        <a href="https://www.ing.com" class="text-link">ING</a>, where I built 
+        <strong>multi-agent retrieval-augmented</strong> pipelines for automated code understanding and modernization 
+        of large legacy codebases.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <!-- <div class="section-label">02 — Education</div> -->
+    <div class="section-title fade-in">Education</div>
+    <div class="timeline-h fade-in">
+      <div class="timeline-h-item current">
+        <div class="timeline-h-dot"></div>
+        <div class="timeline-date">2021 — Present</div>
+        <h3>Ph.D. Candidate in Digital Security Group</h3>
+        <div class="company">Radboud University, The Netherlands</div>
+      </div>
+      <div class="timeline-h-item">
+        <div class="timeline-h-dot"></div>
+        <div class="timeline-date">2017 — 2020</div>
+        <h3>M.Sc. Computer Science</h3>
+        <div class="company">Shiraz University, Iran</div>
+      </div>
+      <div class="timeline-h-item">
+        <div class="timeline-h-dot"></div>
+        <div class="timeline-date">2013 — 2017</div>
+        <h3>B.Sc. Software Engineering</h3>
+        <div class="company">University of Isfahan, Iran</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <!-- <div class="section-label">03 — Experience</div> -->
+    <div class="section-title fade-in">Work Experience</div>
+    <!-- <div class="section-desc fade-in">A path from research to industry-ready engineering.</div> -->
+    <div class="timeline fade-in">
+      <div class="timeline-item current">
+        <div class="timeline-date">2021 — Present</div>
+        <h3>PhD Candidate</h3>
+        <div class="company">Radboud University · Digital Security Group</div>
+        <p>Large-scale web measurement studies to detect online tracking and advertising using ML. Published at IEEE S&P and ACM CCS. Supervised master's thesis on LLM-based web agents.</p>
+        <div class="timeline-tags">
+          <span>ML</span><span>Web measurements</span><span>LLMs</span><span>Privacy</span><span>Data analysis</span>
+        </div>
+      </div>
+      <div class="timeline-item current">
+        <div class="timeline-date">Jan 2026 — Present</div>
+        <h3>Consultant</h3>
+        <div class="company">VaultJS · United States (Remote)</div>
+        <p>Advising on mobile app privacy research, including AI-driven app navigation.</p>
+        <div class="timeline-tags">
+          <span>Mobile privacy</span><span>AI</span><span>iOS</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Apr 2025 — Oct 2025</div>
+        <h3>Generative AI Intern</h3>
+        <div class="company">ING · Amsterdam</div>
+        <p>Developing a multi-agent pipeline with RAG for automated code translation at enterprise scale.</p>
+        <div class="timeline-tags">
+          <span>LLMs</span><span>RAG</span><span>Multi-agent</span><span>Python</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Oct 2023 — Dec 2023</div>
+        <h3>Guest Researcher</h3>
+        <div class="company">University of Twente · iSecLab</div>
+        <p>Built an iOS UI automation library using voice control and accessibility features. Led to an ACM CCS publication.</p>
+        <div class="timeline-tags">
+          <span>iOS</span><span>LLMs</span><span>Automation</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Sep 2020 — Sep 2021</div>
+        <h3>Machine Learning Researcher</h3>
+        <div class="company">MarWell Bio · San Francisco (Remote)</div>
+        <p>Applied Deep Learning to therapeutic antibody discovery in a biotech research team.</p>
+        <div class="timeline-tags">
+          <span>Deep learning</span><span>Bioinformatics</span><span>Python</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="container">
+    <!-- <div class="section-label">06 — Publications</div> -->
+    <div class="section-title fade-in">Publications</div>
+    <!-- <div class="section-desc fade-in">Published at top security and privacy venues.</div> -->
+    <div class="pub-list">
+      <a href="https://github.com/iOSWhisperTest" target="_blank" class="pub-item fade-in">
+        <div class="pub-year">2025</div>
+        <div>
+          <div>WhisperTest: A Voice-Control-Based Library for iOS UI Automation</div>
+          <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS)</div>
+        </div>
+        <span class="pub-badge" onclick="window.open('https://github.com/iOSWhisperTest','_blank');event.preventDefault();event.stopPropagation();">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Code
+        </span>
+      </a>
+      <a href="https://gunesacar.net/assets/bitter-pill-pharmacy-privacy-dpm-25.pdf" target="_blank" class="pub-item fade-in">
+        <div class="pub-year">2025</div>
+        <div>
+          <h3>The Bitter Pill: Tracking and Remarketing on EU Pharmacy Websites</h3>
+          <div class="pub-venue">Data Privacy Management Workshop (DPM) — ESORICS </div>
+        </div>
+        <span class="pub-badge" onclick="window.open('https://github.com/zahra7394/bitter-pill','_blank');event.preventDefault();event.stopPropagation();">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Code
+        </span>
+      </a>
+      <a href="https://petsymposium.org/popets/2025/popets-2025-0092.pdf" target="_blank" class="pub-item fade-in">
+        <div class="pub-year">2025</div>
+        <div>
+          <h3>Referrer Policy: Implementation and Circumvention</h3>
+          <div class="pub-venue">Proceedings on Privacy Enhancing Technologies (PETS)</div>
+        </div>
+        <span class="pub-badge" onclick="window.open('https://github.com/referrer-policy-pets-25','_blank');event.preventDefault();event.stopPropagation();">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Code
+        </span>
+      </a>
+      <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10646733" target="_blank" class="pub-item fade-in">
+        <div class="pub-year">2024</div>
+        <div>
+          <h3>Targeted and Troublesome: Tracking and Advertising on Children's Websites</h3>
+          <div class="pub-venue">IEEE Symposium on Security and Privacy (S&P)</div>
+        </div>
+        <span class="pub-badge" onclick="window.open('https://targeted-troublesome.github.io/','_blank');event.preventDefault();event.stopPropagation();">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Website
+        </span>
+      </a>
+      <a href="https://pdfs.semanticscholar.org/dac6/5614173b0ebb779ce7e284842d61b2bc7ebf.pdf" target="_blank" class="pub-item fade-in">
+        <div class="pub-year">2022</div>
+        <div>
+          <h3>VAEResTL: A Novel Generative Model for Designing CDR of Antibody for SARS-CoV-2</h3>
+          <div class="pub-venue">International Joint Conference on Biomedical Engineering Systems and Technologies (BIOSTEC)</div>
+        </div>
+      </a>
+      <a href="https://www.sciencedirect.com/science/article/pii/S1570870521001281" target="_blank" class="pub-item fade-in">
+        <div class="pub-year">2021</div>
+        <div>
+          <h3>Generative Adversarial Network to Detect Unseen Internet of Things Malware</h3>
+          <div class="pub-venue">Ad Hoc Networks Journal</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS
+<section id="projects">
+  <div class="container">
+    <div class="section-label">04 — Projects</div>
+    <div class="section-title fade-in">Selected work.</div>
+    <div class="section-desc fade-in">Research and engineering projects with real-world impact.</div>
+    <div class="projects-grid">
+      <div class="project-card fade-in">
+        <div class="project-type">LLM Engineering · ING</div>
+        <h3>Multi-Agent RAG for Code Translation</h3>
+        <p>Building a multi-agent system with Retrieval-Augmented Generation to automate code translation at scale for one of Europe's largest banks.</p>
+        <div class="project-tech">
+          <span>LLMs</span><span>RAG</span><span>Multi-agent</span><span>Python</span>
+        </div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-type">Privacy · IEEE S&P 2024</div>
+        <h3>Children's Web Tracking & Advertising</h3>
+        <p>Large-scale measurement study uncovering targeted tracking and advertising on children's websites — published at the top security venue.</p>
+        <div class="project-tech">
+          <span>Python</span><span>Web crawling</span><span>Data analysis</span><span>Puppeteer</span>
+        </div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-type">iOS Automation · ACM CCS 2025</div>
+        <h3>WhisperTest: Voice-Based iOS UI Automation</h3>
+        <p>Built an iOS automation library using voice control for UI testing. Leveraged LLMs to dynamically navigate apps and detect in-app advertisements.</p>
+        <div class="project-tech">
+          <span>iOS</span><span>LLMs</span><span>Pymobiledevice3</span><span>Frida</span>
+        </div>
+      </div>
+      <div class="project-card fade-in">
+        <div class="project-type">ML · Malware Detection</div>
+        <h3>GAN-Based IoT Malware Detection</h3>
+        <p>Developed generative adversarial networks to detect unseen IoT malware variants — generating synthetic samples to improve classifier robustness.</p>
+        <div class="project-tech">
+          <span>PyTorch</span><span>GANs</span><span>Deep learning</span><span>Security</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <!-- <div class="section-label">05 — Skills</div> -->
+    <div class="section-title fade-in">Skills</div>
+    <!-- <div class="section-desc fade-in">From deep learning frameworks to browser automation — tools I use daily.</div> -->
+    <div class="skills-grid">
+      <div class="skill-group fade-in">
+        <h3><span class="icon">⬡</span> Machine Learning & AI</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">HuggingFace</span>
+          <span class="skill-tag">Keras</span>
+          <span class="skill-tag">LLMs</span>
+          <span class="skill-tag">RAG</span>
+          <span class="skill-tag">GANs</span>
+          <span class="skill-tag">Sentence Transformers</span>
+          <span class="skill-tag">Prompt Engineering</span>
+          <span class="skill-tag">Agentic Systems</span>
+        </div>
+      </div>
+      <div class="skill-group fade-in">
+        <h3><span class="icon">⬡</span> Privacy & Security</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Web measurements</span>
+          <span class="skill-tag">Online tracking</span>
+          <span class="skill-tag">Advertising</span>
+          <!-- <span class="skill-tag">iOS automation</span> -->
+          <span class="skill-tag">UI Automation</span>
+          <span class="skill-tag">Frida</span>
+          <span class="skill-tag">Network Traffic Analysis</span>
+          <span class="skill-tag">Malware detection</span>
+        </div>
+      </div>
+      <div class="skill-group fade-in">
+        <h3><span class="icon">⬡</span> Engineering</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Puppeteer</span>
+          <span class="skill-tag">Pymobiledevice3</span>
+          <span class="skill-tag">Selenium</span>
+          <span class="skill-tag">Playwright</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- PRESS -->
+<section id="press">
+  <div class="container">
+    <!-- <div class="section-label">07 — Press</div> -->
+    <div class="section-title fade-in">Press Coverage</div>
+    <div class="press-list fade-in">
+      <a href="https://nltimes.nl/2026/02/23/online-pharmacies-allegedly-share-sensitive-health-data-google-meta-tiktok" target="_blank" class="press-item">
+        <span class="press-outlet">NL Times</span>
+        <span class="press-title">Online pharmacies allegedly share sensitive health data with Google, Meta, TikTok</span>
+        <span class="press-date">Feb 2026</span>
+      </a>
+      <a href="https://radar.avrotros.nl/artikel/online-drogisterijen-en-webshops-delen-gevoelige-gezondheidsdata-met-big-tech-62391" target="_blank" class="press-item">
+        <span class="press-outlet">Radar (AVROTROS)</span>
+        <span class="press-title">Online drogisterijen en webshops delen gevoelige gezondheidsdata met Big Tech</span>
+        <span class="press-date">Feb 2026</span>
+      </a>
+      <a href="https://www.platform-investico.nl/onderzoeken/drogisten-delen-massaal-gevoelige-informatie-met-facebook-en-google" target="_blank" class="press-item">
+        <span class="press-outlet">Investico</span>
+        <span class="press-title">Drogisten sturen massaal gevoelige informatie naar Facebook en Google</span>
+        <span class="press-date">Feb 2026</span>
+      </a>
+      <a href="https://news.rub.de/wissenschaft/2025-05-15-informatik-abnehmpillen-und-depressionstests-fuer-die-kleinen" target="_blank" class="press-item">
+        <span class="press-outlet">Ruhr-Universität Bochum</span>
+        <span class="press-title">Abnehmpillen und Depressionstests für die Kleinen</span>
+        <span class="press-date">May 2025</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-title fade-in">Contact</div>
+    <div class="contact-links fade-in">
+      <a href="mailto:zahra.moti@ru.nl" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+        zahra.moti@ru.nl
+      </a>
+      <a href="https://www.linkedin.com/in/zahra-moti-53414876/" class="contact-link" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    Built with care · © 2025 Zahra Moti
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
