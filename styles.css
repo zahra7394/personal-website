@@ -466,9 +466,88 @@ footer {
   .hero-actions { flex-direction: column; }
   .btn { text-align: center; justify-content: center; }
   .about-highlights { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .service-grid { grid-template-columns: 1fr; }
   .press-item { flex-direction: column; gap: 0.3rem; }
   .press-outlet { min-width: auto; }
   .press-date { text-align: left; }
+}
+
+/* ACADEMIC SERVICE */
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.service-block {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: border-color 0.3s;
+}
+
+.service-block:hover {
+  border-color: var(--accent);
+}
+
+.service-block h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.service-block h3::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 1.1em;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.service-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.service-list li {
+  font-size: 0.95rem;
+  padding: 0.65rem 0 0.65rem 0;
+  position: relative;
+  line-height: 1.55;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+}
+
+.service-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.service-list li::before {
+  content: '›';
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.service-note {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  background: var(--accent-dim);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  white-space: nowrap;
 }
 
 /* PRESS */
