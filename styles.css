@@ -578,7 +578,7 @@ footer {
 
 .press-outlet {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-muted);
   min-width: 160px;
