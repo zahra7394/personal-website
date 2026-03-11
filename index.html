@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <script>
     (function() {
-      var t = localStorage.getItem('theme');
-      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      var t = localStorage.getItem('theme') || 'dark';
       document.documentElement.style.colorScheme = t;
       document.addEventListener('DOMContentLoaded', function() { document.body.setAttribute('data-theme', t); });
     })();
@@ -46,11 +45,12 @@
   <div class="container hero-grid">
     <div class="profile-side">
       <div class="profile-photo">
-        <img src="profile.jpeg" alt="Zahra Moti">
+        <img src="profile.jpg" alt="Zahra Moti">
       </div>
       <h2 class="profile-name">Zahra Moti</h2>
       <div class="profile-role">PhD Candidate</div>
-      <div class="profile-affiliation">Radboud University</div>
+      <!-- <div class="profile-affiliation">Radboud University</div> -->
+      <div class="profile-location">The Netherlands</div>
       <div class="profile-socials">
         <a href="https://github.com/zahra7394/" target="_blank" aria-label="GitHub">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -70,21 +70,9 @@
       <p>
         I am a PhD candidate at <a href="https://www.ru.nl" class="text-link">Radboud University</a> 
         working on applying AI and large language models to analyze web and mobile ecosystems.  
-        My research combines large-scale web measurement, data collection, and AI techniques to detect privacy violations across websites and mobile applications.
-      </p>
-      <!-- <p>
-        I build tools that enable researchers to systematically study privacy risks in the modern 
-        web and mobile ecosystem. 
-        Recently, I developed 
-        <a href="https://github.com/iOSWhisperTest" class="text-link" target="_blank">WhisperTest</a>, 
-        an LLM-powered automation library that dynamically navigates mobile apps 
-        using natural language reasoning to analyze trackers and advertisements.
-      </p> -->
-      <p>
-        Backed by publications at top tier conferences such as IEEE S&P and ACM CCS, I combine 
-        strong research depth with hands-on experience.
-      </p>
-      <p>
+          My research combines large-scale web measurement, data collection, and AI techniques to detect privacy violations across websites and mobile applications. My research is published in leading academic venues such as ACM CCS and IEEE S&P.
+        </p>
+        <p>
         Alongside my academic work, I collaborate with industry on applied privacy and AI systems. 
         I currently work as a consultant with <a href="https://www.vaultjs.com" class="text-link">VaultJS</a> 
         in the United States and previously completed an industry internship at 
@@ -156,7 +144,7 @@
         <div class="timeline-date">Apr 2025 — Oct 2025</div>
         <h3>Generative AI Engineer - Internship</h3>
         <div class="company">ING · The Netherlands</div>
-        <p>Developing a multi-agent system with Retrieval-Augmented Generation (RAG)
+        <p>Developed a multi-agent system with Retrieval-Augmented Generation (RAG)
           for automated code understanding and modernization.</p>
         <div class="timeline-tags">
           <span>LLMs</span><span>RAG</span><span>Multi-agent</span><span>Python</span><span>SQL</span>
@@ -191,110 +179,103 @@
     <div class="section-title fade-in">Publications</div>
     <!-- <div class="section-desc fade-in">Published at top security and privacy venues.</div> -->
     <div class="pub-list">
-      <a href="https://github.com/iOSWhisperTest" target="_blank" class="pub-item fade-in">
+      <div class="pub-item fade-in">
         <div class="pub-year">2025</div>
         <div>
           <div>WhisperTest: A Voice-Control-Based Library for iOS UI Automation</div>
           <div class="pub-venue">ACM Conference on Computer and Communications Security (CCS)</div>
         </div>
-        <span class="pub-badge" onclick="window.open('https://github.com/iOSWhisperTest','_blank');event.preventDefault();event.stopPropagation();">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          Code
-        </span>
-      </a>
-      <a href="https://gunesacar.net/assets/bitter-pill-pharmacy-privacy-dpm-25.pdf" target="_blank" class="pub-item fade-in">
+        <div class="pub-badges">
+          <a href="docs/WhisperTest.pdf" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Paper
+          </a>
+          <a href="https://github.com/iOSWhisperTest" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Code
+          </a>
+        </div>
+      </div>
+      <div class="pub-item fade-in">
         <div class="pub-year">2025</div>
         <div>
           <h3>The Bitter Pill: Tracking and Remarketing on EU Pharmacy Websites</h3>
-          <div class="pub-venue">Data Privacy Management Workshop (DPM) — ESORICS </div>
+          <div class="pub-venue">Data Privacy Management Workshop (DPM) — ESORICS</div>
         </div>
-        <span class="pub-badge" onclick="window.open('https://github.com/zahra7394/bitter-pill','_blank');event.preventDefault();event.stopPropagation();">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          Code
-        </span>
-      </a>
-      <a href="https://petsymposium.org/popets/2025/popets-2025-0092.pdf" target="_blank" class="pub-item fade-in">
+        <div class="pub-badges">
+          <a href="docs/bitter-pill-pharmacy-privacy-dpm-25.pdf" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Paper
+          </a>
+          <a href="https://github.com/zahra7394/bitter-pill" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Code
+          </a>
+        </div>
+      </div>
+      <div class="pub-item fade-in">
         <div class="pub-year">2025</div>
         <div>
           <h3>Referrer Policy: Implementation and Circumvention</h3>
           <div class="pub-venue">Proceedings on Privacy Enhancing Technologies (PETS)</div>
         </div>
-        <span class="pub-badge" onclick="window.open('https://github.com/referrer-policy-pets-25','_blank');event.preventDefault();event.stopPropagation();">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          Code
-        </span>
-      </a>
-      <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10646733" target="_blank" class="pub-item fade-in">
+        <div class="pub-badges">
+          <a href="https://petsymposium.org/popets/2025/popets-2025-0092.pdf" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Paper
+          </a>
+          <a href="https://github.com/referrer-policy-pets-25" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Code
+          </a>
+        </div>
+      </div>
+      <div class="pub-item fade-in">
         <div class="pub-year">2024</div>
         <div>
           <h3>Targeted and Troublesome: Tracking and Advertising on Children's Websites</h3>
           <div class="pub-venue">IEEE Symposium on Security and Privacy (S&P)</div>
         </div>
-        <span class="pub-badge" onclick="window.open('https://targeted-troublesome.github.io/','_blank');event.preventDefault();event.stopPropagation();">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Website
-        </span>
-      </a>
-      <a href="https://pdfs.semanticscholar.org/dac6/5614173b0ebb779ce7e284842d61b2bc7ebf.pdf" target="_blank" class="pub-item fade-in">
+        <div class="pub-badges">
+          <a href="docs/Targeted_and_Troublesome_Tracking_and_Advertising_on_Childrens_Websites.pdf" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Paper
+          </a>
+          <a href="https://targeted-troublesome.github.io/" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Website
+          </a>
+        </div>
+      </div>
+      <div class="pub-item fade-in">
         <div class="pub-year">2022</div>
         <div>
           <h3>VAEResTL: A Novel Generative Model for Designing CDR of Antibody for SARS-CoV-2</h3>
           <div class="pub-venue">International Joint Conference on Biomedical Engineering Systems and Technologies (BIOSTEC)</div>
         </div>
-      </a>
-      <a href="https://www.sciencedirect.com/science/article/pii/S1570870521001281" target="_blank" class="pub-item fade-in">
+        <div class="pub-badges">
+          <a href="docs/VAEResTL.pdf" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Paper
+          </a>
+        </div>
+      </div>
+      <div class="pub-item fade-in">
         <div class="pub-year">2021</div>
         <div>
           <h3>Generative Adversarial Network to Detect Unseen Internet of Things Malware</h3>
           <div class="pub-venue">Ad Hoc Networks Journal</div>
         </div>
-      </a>
+        <div class="pub-badges">
+          <a href="docs/Generative-adversarial-network-to-detect-unseen-Internet-of-Things-malware.pdf" target="_blank" class="pub-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Paper
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- PROJECTS
-<section id="projects">
-  <div class="container">
-    <div class="section-label">04 — Projects</div>
-    <div class="section-title fade-in">Selected work.</div>
-    <div class="section-desc fade-in">Research and engineering projects with real-world impact.</div>
-    <div class="projects-grid">
-      <div class="project-card fade-in">
-        <div class="project-type">LLM Engineering · ING</div>
-        <h3>Multi-Agent RAG for Code Translation</h3>
-        <p>Building a multi-agent system with Retrieval-Augmented Generation to automate code translation at scale for one of Europe's largest banks.</p>
-        <div class="project-tech">
-          <span>LLMs</span><span>RAG</span><span>Multi-agent</span><span>Python</span>
-        </div>
-      </div>
-      <div class="project-card fade-in">
-        <div class="project-type">Privacy · IEEE S&P 2024</div>
-        <h3>Children's Web Tracking & Advertising</h3>
-        <p>Large-scale measurement study uncovering targeted tracking and advertising on children's websites — published at the top security venue.</p>
-        <div class="project-tech">
-          <span>Python</span><span>Web crawling</span><span>Data analysis</span><span>Puppeteer</span>
-        </div>
-      </div>
-      <div class="project-card fade-in">
-        <div class="project-type">iOS Automation · ACM CCS 2025</div>
-        <h3>WhisperTest: Voice-Based iOS UI Automation</h3>
-        <p>Built an iOS automation library using voice control for UI testing. Leveraged LLMs to dynamically navigate apps and detect in-app advertisements.</p>
-        <div class="project-tech">
-          <span>iOS</span><span>LLMs</span><span>Pymobiledevice3</span><span>Frida</span>
-        </div>
-      </div>
-      <div class="project-card fade-in">
-        <div class="project-type">ML · Malware Detection</div>
-        <h3>GAN-Based IoT Malware Detection</h3>
-        <p>Developed generative adversarial networks to detect unseen IoT malware variants — generating synthetic samples to improve classifier robustness.</p>
-        <div class="project-tech">
-          <span>PyTorch</span><span>GANs</span><span>Deep learning</span><span>Security</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <!-- SKILLS -->
 <section id="skills">
@@ -398,9 +379,9 @@
         <span class="press-title">Drogisten sturen massaal gevoelige informatie naar Facebook en Google</span>
         <span class="press-date">Feb 2026</span>
       </a>
-      <a href="https://news.rub.de/wissenschaft/2025-05-15-informatik-abnehmpillen-und-depressionstests-fuer-die-kleinen" target="_blank" class="press-item">
+      <a href="https://news.rub.de/english/2025-05-15-computer-science-weight-loss-pills-and-depression-tests-kids" target="_blank" class="press-item">
         <span class="press-outlet">Ruhr-Universität Bochum</span>
-        <span class="press-title">Abnehmpillen und Depressionstests für die Kleinen</span>
+        <span class="press-title">Weight Loss Pills and Depression Tests for Kids</span>
         <span class="press-date">May 2025</span>
       </a>
     </div>

@@ -116,7 +116,7 @@ section:nth-of-type(even) { background: var(--bg-raised); }
 .hero-grid {
   position: relative; z-index: 1;
   display: grid; grid-template-columns: auto 1fr;
-  gap: 2.5rem; align-items: start;
+  gap: 2.5rem; align-items: center;
 }
 .hero-content p {
   color: var(--text-muted); margin-bottom: 0.8rem;
@@ -140,7 +140,7 @@ section:nth-of-type(even) { background: var(--bg-raised); }
   opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards;
 }
 .profile-photo {
-  width: 220px; height: 250px;
+  width: 200px; height: 200px;
   margin: 0 auto 1rem;
   border-radius: 50%; overflow: hidden;
   border: 3px solid var(--border);
@@ -167,6 +167,10 @@ section:nth-of-type(even) { background: var(--bg-raised); }
 }
 .profile-affiliation {
   font-family: var(--font-display); font-size: 0.96rem;
+  color: var(--text-muted); margin-bottom: 0.2rem;
+}
+.profile-location {
+  font-family: var(--font-display); font-size: 0.88rem;
   color: var(--text-muted); margin-bottom: 1rem;
 }
 .profile-socials {
@@ -343,16 +347,14 @@ a.pub-item { text-decoration: none; color: inherit; }
   padding: 0.3rem 0.6rem; border-radius: 4px;
   background: var(--accent-dim); color: var(--accent);
   white-space: nowrap; letter-spacing: 0.04em;
-}
-.pub-badge-code {
-  cursor: pointer; 
+  text-decoration: none;
   display: inline-flex; align-items: center; gap: 0.35rem;
-  background: var(--bg); border: 1px solid var(--border);
-  color: var(--text-muted); transition: all 0.3s;
+  border: 1px solid transparent;
+  transition: border-color 0.3s, color 0.3s;
 }
-.pub-badge-code svg { width: 14px; height: 14px; }
-.pub-badge-code:hover {
-  border-color: var(--accent); color: var(--accent);
+.pub-badge svg { width: 14px; height: 14px; }
+.pub-badge:hover {
+  border-color: var(--accent);
 }
 
 /* ── TIMELINE ── */
